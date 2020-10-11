@@ -210,7 +210,8 @@ class TestAutoMinorLocator:
         ],
     )
     def test_number_of_minor_ticks_rcparams_auto(self, lim, ref):
-        with mpl.rc_context({'xtick.minor.ndivs': 'auto', 'ytick.minor.ndivs': 'auto'}):
+        with mpl.rc_context({'xtick.minor.ndivs': 'auto',
+                             'ytick.minor.ndivs': 'auto'}):
             fig, ax = plt.subplots()
             ax.set_xlim(*lim)
             ax.set_ylim(*lim)
